@@ -32,16 +32,17 @@ const state = {
   },
   tick() {
      this.seconds++
-    // if ( this.minutes < 10) {
-    //  this.minutes = "0" + this.minutes
-
-    // } 
+   
     if (this.seconds < 10) {
       this.seconds = "0" + this.seconds
     }
    if ( this.seconds === 60 ) {
     this.minutes++
     this.seconds = 0
+     if ( this.minutes < 10) {
+     this.minutes = "0" + this.minutes
+
+    } 
    }
 
 
