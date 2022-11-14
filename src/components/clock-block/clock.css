@@ -1,0 +1,23 @@
+.clock-block {
+
+
+
+
+}
+.clock-container {
+    display: flex;
+    justify-content: right;
+}
+.clock-table {
+    font-family: "LCD";
+   color: aliceblue;
+   font-size: 3rem;
+   margin: 20px 0;
+   padding: 20px 0;
+   text-align: center;
+   position: relative;
+   backdrop-filter: blur(20px) ;
+   width: 300px;
+   border-radius: 10px;
+  
+}
