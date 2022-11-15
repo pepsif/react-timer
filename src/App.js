@@ -7,9 +7,12 @@ import StopWatchTable from './components/stop-watch-table/stop-watch-table';
 function App(props) {
     return (
         <div className="body_inner">
-            <Clock state={props.state}/>
-            <ButtonBlock state={props.state}/>
-            <StopWatchTable state={props.state}/>
+            <Clock state={props.state} />
+            <div className="stop-watch-block">
+                <ButtonBlock state={props.state} />
+                <StopWatchTable state={props.state} />
+            </div>
+
 
         </div>
     );

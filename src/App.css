@@ -51,7 +51,17 @@ body {
 }
 
 .App-link {
-    color: #61dafb;
+    /* color: #61dafb; */
+}
+
+  /* --STOP-WATCH-BLOCK--- */
+.stop-watch-block {
+    /* max-width: 500px; */
+    /* backdrop-filter: blur(20px) ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
 }
 
 .button {
