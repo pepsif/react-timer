@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/header'
 import ButtonBlock from "./components/Button-block/button-block";
 import Clock from './components/clock-block/clock';
 import StopWatchTable from './components/stop-watch-table/stop-watch-table';

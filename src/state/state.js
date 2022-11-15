@@ -9,7 +9,6 @@ const state = {
   seconds: "00",
   t: "",
 
-
   startTimer() {
     if (this.starter === "play") {
       return
@@ -50,25 +49,24 @@ const state = {
   clockTiming: "",
   clockHours: 0,
   clockMinutes: 0,
+  currentDay: "",
+  daysArr: ["Нд","Пн","Вт","Ср","Чт","Пт","Сб"],
+ 
   clockTick: setInterval(() => {
     let now = new Date()
    let hour = now.getHours()
    let minute = now.getMinutes()
-    let second = now.getSeconds()
+    
+   state.currentDay = state.daysArr[now.getDay()]
 
    state.clockHours = hour
    state.clockMinutes = minute
 
-   if(state.minutes < 10) { state.clockMinutes = "0"+ minute}
-
-     console.log("tick")
+   if(state.clockMinutes < 10) { state.clockMinutes = "0"+ minute}
+    
+    //  console.log(minute)
     rerenderTree()
-
-
   },1000),
-
-
-
 }
  console.log( state.clockHours, state.clockMinutes ) 
 
