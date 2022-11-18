@@ -1,0 +1,28 @@
+.timer-section {
+
+}
+.timer-container {
+display: flex;
+justify-content: right;
+}
+.timer-block {
+   
+    backdrop-filter: blur(30px);
+    padding: 10px 20px;
+text-align: center;
+}
+.timer-button-block {
+
+}
+.up{
+
+}
+.down {
+margin: 0;
+}
+.timer-count {
+font-family: "LCD";    
+color:white;
+font-size: 70px;
+font-weight: bold;
+}

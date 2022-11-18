@@ -62,13 +62,19 @@ const state = {
    state.clockHours = hour
    state.clockMinutes = minute
 
-   if(state.clockMinutes < 10) { state.clockMinutes = "0"+ minute}
+   if(state.clockMinutes < 10) { state.clockMinutes = "0" + minute }
     
     //  console.log(minute)
     rerenderTree()
   },1000),
+
+    // --TIMER-STATE---
+    timerHours: "00",
+    timerMinutes: 0,
+
+
 }
- console.log( state.clockHours, state.clockMinutes ) 
+//  console.log( state.clockHours, state.clockMinutes ) 
 
 // console.log(state.t)
 // state.start() 

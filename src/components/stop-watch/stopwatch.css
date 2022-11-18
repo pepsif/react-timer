@@ -1,0 +1,8 @@
+.stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+
+    color:red;
+}
