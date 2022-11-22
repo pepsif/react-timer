@@ -6,23 +6,51 @@ display: flex;
 justify-content: right;
 }
 .timer-block {
-   
-    backdrop-filter: blur(30px);
-    padding: 10px 20px;
-text-align: center;
+   border-radius: 10%;
+    backdrop-filter: blur(90px) brightness(5%);
+   width:320px;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+.timer-title {
+    color:white;
+    margin: 0;
+    text-transform:capitalize;
+    font-family: "Roboto",sans-serif;
+
 }
 .timer-button-block {
-
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 .up{
-
+    margin: 0;
+    width: 60px;
+    border-radius: 50%;
+    /*background-color: #61dafb;*/
 }
 .down {
 margin: 0;
+    width: 60px;
+    border-radius: 50%;
+/*    background-color: #61dafb;*/
+}
+.start {
+    margin: 0;
+    padding: 0 10px;
+    width: 100px;
+    height: 40px;
 }
 .timer-count {
 font-family: "LCD";    
 color:white;
 font-size: 70px;
 font-weight: bold;
+}
+.timer-seconds {
+    font-size: 32px;
 }

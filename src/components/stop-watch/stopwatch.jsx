@@ -5,7 +5,7 @@ function StopWatchTable( props ) {
     return(
         <section className="stopwatch-table ">
             <div className="container ">
-                <p className="timer">{props.state.minutes}:{props.state.seconds}</p>
+                <p className="timer">{props.state.stopwatchDisplay}</p>
             </div>
 
         </section>
