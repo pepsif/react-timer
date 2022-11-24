@@ -1,13 +1,13 @@
 .timer-section {
-
+margin-top: 20px;
 }
 .timer-container {
 display: flex;
 justify-content: right;
 }
 .timer-block {
-   border-radius: 10%;
-    backdrop-filter: blur(90px) brightness(5%);
+   border-radius: 20px;
+    backdrop-filter: blur(90px) brightness(0%);
    width:320px;
 display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ display: flex;
     margin: 0;
     width: 60px;
     border-radius: 50%;
-    /*background-color: #61dafb;*/
+
 }
 .down {
 margin: 0;
@@ -53,4 +53,5 @@ font-weight: bold;
 }
 .timer-seconds {
     font-size: 32px;
+    margin-left: 14px;
 }

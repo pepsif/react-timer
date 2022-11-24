@@ -32,7 +32,7 @@ const state = {
     tick() {
         this.seconds += 1
         let display = ""
-       
+
         const minutes = Math.floor(this.seconds / 60)
         const seconds = this.seconds % 60
         if (minutes < 10) {
@@ -44,9 +44,9 @@ const state = {
         }
         display += `${seconds}`
         this.stopwatchDisplay = display
-        if(minutes) { console.log("++")}
-        console.log(minutes)
-
+        if (minutes) {
+            console.log("++")
+        }
     },
     //  --CLOCK-STATE---
     clockTiming: "",
@@ -68,30 +68,7 @@ const state = {
         if (state.clockMinutes < 10) {
             state.clockMinutes = "0" + minute
         }
-
-        //  console.log(minute)
         rerenderTree()
-    }, 1000),
-
-    // --TIMER-STATE---
-    timerMinutes: 0,
-    timerSeconds: 0,
-    timerMilliSeconds: 0,
-    timerInterval: "",
-
-    timerIncrease() {
-        this.timerMinutes += 1
-        rerenderTree()
-    },
-    timerDecrease() {
-        if(this.timerMinutes === 0) return
-        this.timerMinutes -= 1
-        rerenderTree()
-    }
-
+    }, 1000)
 }
-//  console.log( state.clockHours, state.clockMinutes ) 
-
-// console.log(state.t)
-// state.start() 
 export default state

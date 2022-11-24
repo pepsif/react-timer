@@ -1,7 +1,8 @@
 import React from "react";
+import './button-block.css'
 
 function ButtonBlock(props) {
-  
+
     const startTimer = () => {
         props.state.startTimer()
     }
@@ -14,12 +15,9 @@ function ButtonBlock(props) {
     return (
 
         <div className="button-block">
-            <div className="container">
-                <button className="button on" onClick={startTimer} >Start</button>
-                <button className="button off"  onClick={stopTimer} >Pause</button>
-                <button className="button reset"  onClick={resetTimer} >Reset</button>
-            </div>
-
+            <button className="button on" onClick={startTimer}>Start</button>
+            <button className="button off" onClick={stopTimer}>Pause</button>
+            <button className="button reset" onClick={resetTimer}>Reset</button>
         </div>
 
     )

@@ -3,6 +3,22 @@
     flex-direction: column;
     justify-content: right;
     align-items: flex-end;
+}
 
-    color:red;
+.stopwatch-block {
+    backdrop-filter: blur(30px) brightness(10%);
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+.stopwatch {
+    font-family: "LCD", serif;
+    font-size: 70px;
+    letter-spacing: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: azure;
+
+    padding: 10px 40px;
+    border-radius: 20px;
 }

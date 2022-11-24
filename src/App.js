@@ -11,11 +11,14 @@ function App(props) {
             <Clock state={props.state} />
             <section className="stopwatch-section">
                 <div className='container stopwatch-container'>
-                    <ButtonBlock state={props.state} />
-                    <StopWatchTable state={props.state} />
+                    <div className="stopwatch-block">
+                        <ButtonBlock state={props.state} />
+                        <StopWatchTable state={props.state} />
+                    </div>
+
                 </div>
             </section>
-            <Timer state={props.state}/>
+            <Timer state={props.timerState}/>
 
         </div>
     );

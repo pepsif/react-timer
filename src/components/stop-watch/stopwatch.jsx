@@ -1,13 +1,10 @@
 import React from "react";
 import './stopwatch.css'
 
-function StopWatchTable( props ) {
-    return(
+function StopWatchTable(props) {
+    return (
         <section className="stopwatch-table ">
-            <div className="container ">
-                <p className="timer">{props.state.stopwatchDisplay}</p>
-            </div>
-
+            <p className="stopwatch">{props.state.stopwatchDisplay}</p>
         </section>
     )
 }
