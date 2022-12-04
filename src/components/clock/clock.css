@@ -9,6 +9,7 @@
     justify-content: right;
     text-shadow: 1px 2px 8px rgb(54, 50, 50);
      font-size: 3rem;
+    position: relative;
 }
 .clock-table {
   display: flex;
@@ -18,7 +19,7 @@
    padding: 20px 20px 20px 20px;
    text-align: center;
    position: relative;
-   backdrop-filter: blur(20px) ;
+   backdrop-filter: blur(20px) brightness(40%);
    /* width: 300px; */
    border-radius: 15px;
    box-shadow: 10px 10px 27px -3px rgba(0,0,0,0.75) inset;
@@ -38,10 +39,37 @@
   
   
 }
+.settings-icon {
+    width:30px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(20px,30px);
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
 .bell-icon:hover {
   cursor: pointer;
 }
 .alarm-day {
   font-size: 20px;
   margin-left: 6px;
+}
+
+    /*---MODAL---*/
+.clock-settings-modal {
+position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    top:0%;
+    left: 0;
+    /* backdrop-filter: blur(10px) brightness(10%) ; */
+    background-color: black;
+    display: none;
+
+
+}
+.clock-settings-title {
+  
 }
