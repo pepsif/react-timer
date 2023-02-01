@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const rerenderTree = () => {
   root.render(
-      <React.StrictMode>
+      <div>
         <App state={state} timerState={timerState}/>
-      </React.StrictMode>
+      </div>
   );
 }
 

@@ -6,11 +6,16 @@
 }
 
 .stopwatch-block {
-    backdrop-filter: blur(30px) brightness(10%);
-    padding: 20px 10px;
+    backdrop-filter: blur(30px) brightness(30%);
+    padding: 0 10px;
     border-radius: 20px;
 }
-
+.stopwatch-block-title {
+    text-align: center;
+    color:white;
+    margin: 0;
+    padding: 10px 0;
+}
 .stopwatch {
     font-family: "LCD", serif;
     font-size: 70px;

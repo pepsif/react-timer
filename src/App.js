@@ -12,6 +12,7 @@ function App(props) {
             <section className="stopwatch-section">
                 <div className='container stopwatch-container'>
                     <div className="stopwatch-block">
+                        <h2 className="stopwatch-block-title">Stopwatch</h2>
                         <ButtonBlock state={props.state} />
                         <StopWatchTable state={props.state} />
                     </div>

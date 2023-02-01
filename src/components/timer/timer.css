@@ -7,7 +7,7 @@ justify-content: right;
 }
 .timer-block {
    border-radius: 20px;
-    backdrop-filter: blur(90px) brightness(0%);
+    backdrop-filter: blur(90px) brightness(30%);
    width:320px;
 display: flex;
     flex-direction: column;
