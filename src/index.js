@@ -15,7 +15,7 @@ const rerenderTree = () => {
   );
 }
 
-rerenderTree( )
+rerenderTree()
 
 export default rerenderTree
 

@@ -19,4 +19,6 @@ const timerReducer = (state = timerState, action) => {
   }
 };
 
+export const timerIncrease = () => ({ type: TIMER_INCREASE })
+
 export default timerReducer;

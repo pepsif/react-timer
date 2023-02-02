@@ -31,7 +31,6 @@ const timerState = {
                 timerEnd.play()
                 return
             }
-
             if (this.timerSeconds === 0) {
                 this.timerSeconds = 59
                 this.timerMinutes -= 1
@@ -47,23 +46,26 @@ const timerState = {
             rerenderTree()
         }, 1000)
     },
-
     timerIncrease() {
         this.timerMinutes += 1
+
         this.timerDisplay = `${this.timerMinutes}: 0${this.timerSeconds}`
         if (this.timerMinutes < 10) {
             this.timerDisplay = "0" + `${this.timerMinutes}: 0${this.timerSeconds}`
         }
       
+
     },
     timerDecrease() {
         if (this.timerMinutes === 0) return
         this.timerMinutes -= 1
+
         this.timerDisplay = `${this.timerMinutes}: 0${this.timerSeconds}`
         if (this.timerMinutes < 10) {
             this.timerDisplay = "0" + `${this.timerMinutes}: 0${this.timerSeconds}`
         }
      
+
     }
 }
 
