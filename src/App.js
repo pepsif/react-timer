@@ -10,7 +10,7 @@ function App(props) {
         <div className="body_inner">
             <Clock state={props.state} />
             <StopWatchContainer state={props.state}/>
-            <Timer state={props.timerState}/>
+            <Timer />
 
         </div>
     );

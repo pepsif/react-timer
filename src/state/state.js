@@ -68,7 +68,7 @@ const state = {
         if (state.clockMinutes < 10) {
             state.clockMinutes = "0" + minute
         }
-        rerenderTree()
+        
     }, 1000)
 }
 export default state
