@@ -71,4 +71,3 @@ const state = {
         
     }, 1000)
 }
-export default state
