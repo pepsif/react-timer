@@ -8,8 +8,8 @@ import Timer from './components/timer/timer';
 function App(props) {
     return (
         <div className="body_inner">
-            {/* <Clock state={props.state} />
-            <StopWatchContainer state={props.state}/> */}
+            {/* <Clock state={props.state} /> */}
+            <StopWatchContainer />
             <Timer />
 
         </div>

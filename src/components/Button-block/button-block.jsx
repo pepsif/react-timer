@@ -1,23 +1,24 @@
 import React from "react";
-import './button-block.css'
+import './button-block.css';
 
-function ButtonBlock(props) {
+import { useSelector, useDispatch } from "react-redux";
+import { setStopwatchStarter, setStopwatchPause, setStopwatchReset } from '../../redux/slices/stopwatchSlice';
 
-    const startTimer = () => {
-        props.state.startTimer()
-    }
-    const stopTimer = () => {
-        props.state.stopTimer()
-    }
-    const resetTimer = () => {
-        props.state.resetTimer()
-    }
+function ButtonBlock() {
+    const dispatch = useDispatch();
+    const stopwatchStarter = useSelector(( state ) => state.stopwatch.stopwatchStarter);
+    const stopwatchStart = () => {
+       dispatch(setStopwatchStarter(true))
+      };
+      const stopwatchReset = () => {
+        dispatch(setStopwatchReset())
+      }
     return (
 
         <div className="button-block">
-            <button className="button on" onClick={startTimer}>Start</button>
-            <button className="button off" onClick={stopTimer}>Pause</button>
-            <button className="button reset" onClick={resetTimer}>Reset</button>
+            <button className="button on" onClick={ stopwatchStart } >Start / Stop</button>
+            {/* <button className="button off" >Pause</button> */}
+            <button className="button reset" onClick={ stopwatchReset }>Reset</button>
         </div>
 
     )
