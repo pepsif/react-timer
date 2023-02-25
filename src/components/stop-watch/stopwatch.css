@@ -3,12 +3,17 @@
     flex-direction: column;
     justify-content: right;
     align-items: flex-end;
+    
 }
 
 .stopwatch-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     backdrop-filter: blur(30px) brightness(30%);
-    padding: 0 10px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+   
 }
 .stopwatch-block-title {
     text-align: center;
@@ -16,14 +21,14 @@
     margin: 0;
     padding: 10px 0;
 }
-.stopwatch {
+.stopwatch-table {
     font-family: "LCD", serif;
     font-size: 70px;
     letter-spacing: 16px;
     font-weight: 400;
-    margin: 0;
+    /* margin: 0; */
     color: azure;
 
-    padding: 10px 40px;
+    /* padding: 10px 40px; */
     border-radius: 20px;
 }

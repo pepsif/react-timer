@@ -1,5 +1,6 @@
 .timer-section {
 margin-top: 20px;
+
 }
 .timer-container {
 display: flex;
@@ -7,7 +8,7 @@ justify-content: right;
 }
 .timer-block {
    border-radius: 20px;
-    backdrop-filter: blur(90px) brightness(30%);
+    backdrop-filter: blur(0px) brightness(30%);
    width:320px;
 display: flex;
     flex-direction: column;

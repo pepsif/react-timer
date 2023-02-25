@@ -67,11 +67,10 @@ const Timer = () => {
            <button className="button down" onClick={ timerDecrease} > - </button>
             
           </div>
-          <span className="timer-count">
-            
-            {timerMinute < 10 ? "0" + timerMinute : timerMinute}:
-            {timerSecond < 10 ? "0" + timerSecond : timerSecond}
-          </span>
+          <div className="timer-count">
+            {timerMinute < 10 ? "0" + timerMinute : timerMinute} : {timerSecond < 10 ? "0" + timerSecond : timerSecond}
+             
+          </div>
         </div>
       </div>
     </section>

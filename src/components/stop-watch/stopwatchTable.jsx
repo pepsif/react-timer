@@ -28,7 +28,7 @@ function StopWatchTable() {
        disptach(setStopwatchSeconds(0))
       }
 
-      console.log("stopwatch table");
+    //   console.log("stopwatch table");
     }, 1000);
 
     return () => {
@@ -37,12 +37,12 @@ function StopWatchTable() {
   });
 
   return (
-    <section className="stopwatch-table ">
-      <span className="stopwatch">
+    <div className="stopwatch-table ">
+      
         {minutes < 10 ? "0" + minutes : minutes}:
         {seconds < 10 ? "0" + seconds : seconds}
-      </span>
-    </section>
+      
+    </div>
   );
 }
 

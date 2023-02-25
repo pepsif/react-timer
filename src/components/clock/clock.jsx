@@ -1,49 +1,37 @@
-import React, {createRef} from "react";
+import React from "react";
+import "./clock.css";
 
-import './clock.css'
 
-function Clock(props) {
-    const bellIcon = createRef()
-    const settingsModal = createRef()
+function Clock() {
+ const [ hours, setHours ] = React.useState(0);
+ const [ minutes, setMinutes ] = React.useState(0);
+ const [ seconds, setSeconds ] = React.useState(0);
 
-    let clockSettingsWindow = {
-        count: 0,
-        color: 'red',
-        display: 'none',
-        openSettingsWindow() {
-            clockSettingsWindow.count += 1
-            clockSettingsWindow.display = "block"
-            console.log(clockSettingsWindow.count)
-        }
+  setInterval( () => {  
+   const now = new Date()
+  const hours = now.getHours()
+  const minutes = now.getMinutes()
+  const seconds = now.getSeconds()
 
-    }
-    const openModal = () => {
-        clockSettingsWindow.openSettingsWindow()
-    }
+  setHours(hours);
+  setMinutes(minutes)
 
-    return (
-        <section className="clock-block">
-            <div className="container clock-container">
-                <div className="clock-table">
-                    <div className="number-block">{props.state.clockHours}:{props.state.clockMinutes}</div>
-                    <div className="alarm-block">
-                        <img className="bell-icon" src={require("../../images/bell.jpg")} alt="bell-icon"
-                             onClick={openModal} ref={bellIcon}></img>
-                        <span className="alarm-day">{props.state.currentDay}</span>
-                        <img className="settings-icon" src={require("../../images/settings.png")}
-                             alt="settings icon"></img>
-                    </div>
-                    <div className="clock-settings-modal" style={clockSettingsWindow} ref={settingsModal}>
-                        <h3 className="clock-settings-title">set alarm</h3>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-    )
-
+  },1000)
+  
+  return (
+    <section className="clock-block">
+      <div className="container clock-container">
+        <div className="clock-table">
+          <div className="number-block">{hours}:{minutes}</div>
+          <div className="alarm-block">
+            <img className="bell-icon" src={require("../../images/bell.jpg")} alt="bell-icon" ></img>
+            <span className="alarm-day">alarm</span>
+            <img className="settings-icon" src={require("../../images/settings.png")} alt="settings icon" ></img>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-
-export default Clock
+export default Clock;
