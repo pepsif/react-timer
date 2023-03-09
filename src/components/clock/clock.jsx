@@ -1,32 +1,47 @@
 import React from "react";
 import "./clock.css";
 
-
 function Clock() {
- const [ hours, setHours ] = React.useState(0);
- const [ minutes, setMinutes ] = React.useState(0);
- const [ seconds, setSeconds ] = React.useState(0);
+  const [hours, setHours] = React.useState(0);
+  const [minutes, setMinutes] = React.useState(0);
+ 
+  const daysArr = ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+  const now = new Date();
+  const day = daysArr[now.getDay()];
 
-  setInterval( () => {  
-   const now = new Date()
-  const hours = now.getHours()
-  const minutes = now.getMinutes()
-  const seconds = now.getSeconds()
+  setInterval(() => {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    
 
-  setHours(hours);
-  setMinutes(minutes)
+    setHours(hours);
+    setMinutes(minutes);
 
-  },1000)
-  
+    document.title = `${hours}:${minutes}`
+  }, 1000);
+
   return (
     <section className="clock-block">
       <div className="container clock-container">
         <div className="clock-table">
-          <div className="number-block">{hours}:{minutes}</div>
+          <div className="number-block">
+            {hours < 10 ? "0" + hours : hours}:
+            {minutes < 10 ? "0" + minutes : minutes}
+          </div>
           <div className="alarm-block">
-            <img className="bell-icon" src={require("../../images/bell.jpg")} alt="bell-icon" ></img>
-            <span className="alarm-day">alarm</span>
-            <img className="settings-icon" src={require("../../images/settings.png")} alt="settings icon" ></img>
+            <span className="clock-day">{day}</span>
+            <img
+              className="bell-icon"
+              src={require("../../images/bell.jpg")}
+              alt="bell-icon"
+            ></img>
+
+            <img
+              className="settings-icon"
+              src={require("../../images/settings.png")}
+              alt="settings icon"
+            ></img>
           </div>
         </div>
       </div>

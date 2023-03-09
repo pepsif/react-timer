@@ -1,21 +1,13 @@
 import React from "react";
-import './header.css'
+import './Header.css';
+import  settings  from '../../images/settings-icon.png'; 
 
-function Header() {
-    return (
-        <header className="App-header">
-           <div className="container header-container">
-              
-               <ul className="menu-list">
-                   <li className="menu-item">Clock</li>
-                   <li className="menu-item">Timer</li>
-                   <li className="menu-item">Stopwatch</li>
-               </ul>
-           </div>
+const Header = () => { 
+ return (
+  <div>
+    <img className="settings_icon" src={settings} alt="settings icon"></img>
+  </div>
+ )
+ }
 
-        </header>
-    );
-}
-
-export default Header
-
+ export default Header

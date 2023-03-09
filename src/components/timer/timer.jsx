@@ -2,11 +2,7 @@ import React from "react";
 import "./timer.css";
 
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setTimerStarter,
-  setTimerMinute,
-  setTimerSeconds,
-} from "../../redux/slices/timerSlice";
+import { setTimerStarter, setTimerMinute, setTimerSeconds, } from "../../redux/slices/timerSlice";
 
 import { useEffect } from "react";
 

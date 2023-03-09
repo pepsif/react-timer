@@ -10,25 +10,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(30px) brightness(30%);
+   
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 51px;
+    background: #e0e0e0;
+    box-shadow:  23px 23px 46px #bebebe,
+                 -23px -23px 46px #ffffff;
    
 }
 .stopwatch-block-title {
     text-align: center;
-    color:white;
+    /* color:white; */
     margin: 0;
     padding: 10px 0;
+    text-shadow: 6px 7px 5px rgba(70, 67, 67, 0.3);
 }
 .stopwatch-table {
     font-family: "LCD", serif;
     font-size: 70px;
-    letter-spacing: 16px;
+   
     font-weight: 400;
-    /* margin: 0; */
-    color: azure;
+    font-family: "LCD";
 
-    /* padding: 10px 40px; */
     border-radius: 20px;
 }

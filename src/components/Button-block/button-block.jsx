@@ -7,8 +7,12 @@ import { setStopwatchStarter, setStopwatchPause, setStopwatchReset } from '../..
 function ButtonBlock() {
     const dispatch = useDispatch();
     const stopwatchStarter = useSelector(( state ) => state.stopwatch.stopwatchStarter);
-    const stopwatchStart = () => {
+
+    const stopwatchStart = (el) => {
        dispatch(setStopwatchStarter(true))
+       el.target.classList.toggle("active");
+       
+       
       };
       const stopwatchReset = () => {
         dispatch(setStopwatchReset())
@@ -16,7 +20,7 @@ function ButtonBlock() {
     return (
 
         <div className="button-block">
-            <button className="button on" onClick={ stopwatchStart } >Start / Stop</button>
+            <button className="button on" onClick={el =>  stopwatchStart(el) } >Start / Stop</button>
             {/* <button className="button off" >Pause</button> */}
             <button className="button reset" onClick={ stopwatchReset }>Reset</button>
         </div>

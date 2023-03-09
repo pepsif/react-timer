@@ -17,5 +17,11 @@
 }
 
 .button:hover {
-    background-color: darkgrey;
+    opacity: 0.8;
+}
+.active {
+    background-color: rgba(82, 165, 65, 0.6)
+}
+.stop {
+    background-color: rgba(165, 65, 65, 0.6)
 }

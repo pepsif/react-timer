@@ -1,8 +1,6 @@
 .clock-block {
 
 
-
-
 }
 .clock-container {
     display: flex;
@@ -14,15 +12,16 @@
 .clock-table {
   display: flex;
     font-family: "LCD";
-   color: aliceblue;
+   
      margin: 20px 0;
    padding: 20px 20px 20px 20px;
    text-align: center;
    position: relative;
-   backdrop-filter: blur(20px) brightness(40%);
-   /* width: 300px; */
-   border-radius: 15px;
-   box-shadow: 10px 10px 27px -3px rgba(0,0,0,0.75) inset;
+  
+   border-radius: 50px;
+   background: #e0e0e0;
+   box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
   
 }
 .number-block {
@@ -39,6 +38,11 @@
   
   
 }
+.clock-day {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 4px;
+}
 .settings-icon {
     width:30px;
     background-color: white;
@@ -51,25 +55,5 @@
 .bell-icon:hover {
   cursor: pointer;
 }
-.alarm-day {
-  font-size: 20px;
-  margin-left: 6px;
-}
-
-    /*---MODAL---*/
-.clock-settings-modal {
-position: absolute;
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    top:0%;
-    left: 0;
-    /* backdrop-filter: blur(10px) brightness(10%) ; */
-    background-color: black;
-    display: none;
 
 
-}
-.clock-settings-title {
-  
-}
