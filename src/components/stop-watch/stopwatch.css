@@ -1,9 +1,17 @@
-.stopwatch-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: flex-end;
-    
+.stopwatch-section {
+    grid-column: 2;
+    grid-row: 2;
+   width: 70%;
+   margin-left: 2rem;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+   border-radius: 51px;
+    background: #e0e0e0;
+    box-shadow:  23px 23px 46px #bebebe,
+                 -23px -23px 46px #ffffff;
 }
 
 .stopwatch-block {
@@ -12,10 +20,8 @@
     align-items: center;
    
     padding: 10px 20px;
-    border-radius: 51px;
-    background: #e0e0e0;
-    box-shadow:  23px 23px 46px #bebebe,
-                 -23px -23px 46px #ffffff;
+    
+                 
    
 }
 .stopwatch-block-title {

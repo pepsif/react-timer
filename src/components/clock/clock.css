@@ -1,42 +1,43 @@
 .clock-block {
+  grid-column-start: 1;
+  grid-row: 2/4;
+  box-shadow: 23px 23px 46px #BEBEBE, -23px -23px 46px #FFFFFF;
+  border-radius: 50px;
+    margin-left: 10%;
 
-
-}
-.clock-container {
     display: flex;
-    justify-content: right;
-    text-shadow: 1px 2px 8px rgb(54, 50, 50);
-     font-size: 3rem;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
+
 .clock-table {
   display: flex;
-    font-family: "LCD";
-   
-     margin: 20px 0;
-   padding: 20px 20px 20px 20px;
-   text-align: center;
-   position: relative;
-  
-   border-radius: 50px;
-   background: #e0e0e0;
-   box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
-  
-}
-.number-block {
+  flex-direction: column;
+  font-family: "LCD";
 
 }
+.date {
+  
+  font-size: 2rem;
+  font-family: "Inter light",sans-serif;
+  text-align: center;
+  letter-spacing: 0.8rem;
+}
+.number-block {
+  font-size: 4rem;
+  font-family: "Inter medium",sans-serif;
+
+line-height: 75px;
+letter-spacing: 1rem;
+}
 .alarm-block {
- display: flex;
- align-items: flex-start;
- margin-left: 10px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10px;
 }
 .bell-icon {
-  width:20px;
+  width: 20px;
   border-radius: 10px;
-  
-  
 }
 .clock-day {
   font-size: 20px;
@@ -44,16 +45,14 @@
   margin-right: 4px;
 }
 .settings-icon {
-    width:30px;
-    background-color: white;
-    border-radius: 50%;
-    transform: translate(20px,30px);
-    position: absolute;
-    cursor: pointer;
-    display: none;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(20px, 30px);
+  position: absolute;
+  cursor: pointer;
+  display: none;
 }
 .bell-icon:hover {
   cursor: pointer;
 }
-
-

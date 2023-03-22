@@ -9,11 +9,11 @@ function App(props) {
   
 
     return (
-        <div className='container'>
-            <Header />
+        <div className="clock-box">
+            
             <Clock />
-            <StopWatchContainer />
-            <Timer />
+            <StopWatchContainer /> 
+            {/* <Timer />  */}
 
         </div>
     );

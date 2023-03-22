@@ -21,7 +21,7 @@ function ButtonBlock() {
 
         <div className="button-block">
             <button className="button on" onClick={el =>  stopwatchStart(el) } >Start / Stop</button>
-            {/* <button className="button off" >Pause</button> */}
+           
             <button className="button reset" onClick={ stopwatchReset }>Reset</button>
         </div>
 
