@@ -1,0 +1,26 @@
+.theme-checkbox {
+    grid-column: 2;
+    width: 60px;
+    height: 60px;
+    align-self: center;
+    justify-self: right;
+    margin-right: 60px;
+
+    border: none;
+    box-shadow: 23px 23px 46px #BEBEBE, -23px -23px 46px #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-button:hover {
+    /*background-color: #e0e0e0;*/
+}
+.theme-button:checked {
+    box-shadow:inset 23px 23px 46px #BEBEBE,inset -23px -23px 46px #FFFFFF;
+
+}
+.theme-icon {
+    width: 30px;
+    height: 30px;
+
+}

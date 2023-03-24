@@ -1,42 +1,37 @@
 .stopwatch-section {
-    grid-column: 2;
-    grid-row: 2;
-   width: 70%;
-   margin-left: 2rem;
+  grid-column: 2;
+  grid-row: 2;
+  width: 80%;
+  margin-left: 2rem;
 
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-   border-radius: 51px;
-    background: #e0e0e0;
-    box-shadow:  23px 23px 46px #bebebe,
-                 -23px -23px 46px #ffffff;
+  border-radius: 51px;
+  background: #e0e0e0;
+  box-shadow: 23px 23px 46px #bebebe, -23px -23px 46px #ffffff;
 }
 
 .stopwatch-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    padding: 10px 20px;
-    
-                 
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    width: inherit;
+
 }
 .stopwatch-block-title {
+    font-size: 1rem;
+    font-family: "Inter medium",sans-serif;
     text-align: center;
-    /* color:white; */
-    margin: 0;
-    padding: 10px 0;
-    text-shadow: 6px 7px 5px rgba(70, 67, 67, 0.3);
+    letter-spacing: 0.2rem;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .stopwatch-table {
-    font-family: "LCD", serif;
-    font-size: 70px;
-   
-    font-weight: 400;
-    font-family: "LCD";
-
-    border-radius: 20px;
+  /* font-family: "LCD", serif; */
+  font-family: "Inter medium",sans-serif;
+  font-size: 70px;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  border-radius: 20px;
 }

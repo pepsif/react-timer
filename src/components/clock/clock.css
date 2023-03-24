@@ -13,7 +13,7 @@
 .clock-table {
   display: flex;
   flex-direction: column;
-  font-family: "LCD";
+ 
 
 }
 .date {
@@ -22,11 +22,12 @@
   font-family: "Inter light",sans-serif;
   text-align: center;
   letter-spacing: 0.8rem;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .number-block {
   font-size: 4rem;
   font-family: "Inter medium",sans-serif;
-
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 line-height: 75px;
 letter-spacing: 1rem;
 }

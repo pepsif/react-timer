@@ -54,7 +54,7 @@ const Timer = () => {
 
   return (
     <section className="timer-section">
-      <div className="container timer-container">
+     
         <div className="timer-block">
           <h3 className="timer-title">timer</h3>
           <div className="timer-button-block">
@@ -68,7 +68,7 @@ const Timer = () => {
              
           </div>
         </div>
-      </div>
+     
     </section>
   );
 };

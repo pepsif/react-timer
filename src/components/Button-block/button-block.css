@@ -1,27 +1,32 @@
 .button-block {
     display: flex;
     justify-content: space-around;
-    margin: 10px;
+    width: 100%;
+
 }
+
 .button {
-    margin-right: 20px;
-    padding: 10px 10px;
-    border-radius: 10px;
+    font-family: "Inter medium", sans-serif;
+    /*margin-right: 20px;*/
+    padding: 10px 30px;
     font-size: 24px;
     font-weight: bold;
     border: none;
-    text-shadow: 1px 2px 8px rgb(54, 50, 50);
-    box-shadow: 10px 10px 27px -3px rgba(0,0,0,0.75) inset;
-
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #E0E0E0;
+    box-shadow: 23px 23px 46px #BEBEBE, -23px -23px 46px #FFFFFF;
+    border-radius: 51px;
 
 }
 
 .button:hover {
     opacity: 0.8;
 }
+
 .active {
     background-color: rgba(82, 165, 65, 0.6)
 }
+
 .stop {
     background-color: rgba(165, 65, 65, 0.6)
 }

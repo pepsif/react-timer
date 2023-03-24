@@ -1,0 +1,37 @@
+@media (max-width: 1102px) { 
+ .clock-block {
+    height: 100%;
+ }   
+.date {
+ font-size: 1.6rem;
+}
+.number-block {
+    font-size: 3rem;
+}
+
+/* --stopwatch-- */
+.stopwatch-section {
+  
+}
+.stopwatch-block-title {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.button {
+    padding: 6px 16px;
+    font-size: 18px;
+}
+.stopwatch-table {
+    font-size: 50px;
+}
+
+/* --timer--- */
+.timer-title {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.timer-count {
+    font-size: 50px;
+}
+
+}
