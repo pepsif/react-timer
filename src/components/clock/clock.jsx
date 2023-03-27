@@ -7,7 +7,9 @@ function Clock() {
 
   const daysArr = ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
   const now = new Date();
-  const day = daysArr[now.getDay()];
+  const day = now.getDate();
+  const month = now.getMonth()+1;
+  const year = now.getFullYear()
 
   setInterval(() => {
     const now = new Date();
@@ -23,17 +25,13 @@ function Clock() {
   return (
     <section className="clock-block">
       <div className="clock-table">
-        <div className="date">Tu/20/03</div>
+        <div className="date">{`${day}/${(month <10 ? "0" + month : month)}/${year}`}</div>
 
         <div className="number-block">
           {hours < 10 ? "0" + hours : hours}:
           {minutes < 10 ? "0" + minutes : minutes}
         </div>
-        {/* <div className="alarm-block">
-            <span className="clock-day">{day}</span> <img className="bell-icon" src={require("../../images/bell.jpg")} alt="bell-icon" ></img>
-
-            <img className="settings-icon" src={require("../../images/settings.png")} alt="settings icon" ></img>
-          </div> */}
+        
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ const Timer = () => {
       if (timerStarter && timerMinute === 0 && timerSecond === 0) {
         clearInterval(interval);
         dispatch(setTimerStarter(false));
-        alert("timer stop");
+        // alert("timer stop");
         dispatch(setTimerSeconds(0));
       }
     }, 1000);

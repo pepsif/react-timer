@@ -9,7 +9,7 @@ function ButtonBlock() {
     const stopwatchStarter = useSelector(( state ) => state.stopwatch.stopwatchStarter);
     const stopwatchSeconds = useSelector((state) => state.stopwatch.second)
 
-    console.log(stopwatchStarter,stopwatchSeconds)
+   
 
     const stopwatchStart = (el) => {
        dispatch(setStopwatchStarter(true))

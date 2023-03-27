@@ -30,6 +30,15 @@
     margin: 0;
     font-size: 0.9rem;
 }
+.up {
+    width: 50px;
+}
+.start {
+    width: 120px;
+}
+.down {
+    width: 50px;
+}
 .timer-count {
     font-size: 50px;
 }

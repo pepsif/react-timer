@@ -1,78 +1,73 @@
 .timer-section {
-grid-column: 2;
-grid-row: 3;
+  grid-column: 2;
+  grid-row: 3;
 
-width: 80%;
-margin-left: 2rem;
+  width: 80%;
+  margin-left: 2rem;
 
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-border-radius: 51px;
-background: #e0e0e0;
-box-shadow: 23px 23px 46px #bebebe, -23px -23px 46px #ffffff;
+  border-radius: 51px;
 
-
-
+  box-shadow: 23px 23px 46px #bebebe, -23px -23px 46px #ffffff;
 }
 .timer-container {
-display: flex;
-justify-content: right;
+  display: flex;
+  justify-content: right;
 }
 .timer-block {
-   
-    
-   width:100%;
-display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    border-radius: 51px;
-    background: #e0e0e0;
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 51px;
 }
 .timer-title {
-    font-size: 1rem;
-    font-family: "Inter medium",sans-serif;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-    text-transform: capitalize;
-    margin: 16px;
+  font-size: 1rem;
+  font-family: "Inter medium", sans-serif;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize;
+  margin: 16px;
 }
 .timer-button-block {
-display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
-.up{
-    margin: 0;
-    width: 70px;
-    border-radius: 50%;
-
+.timer-button-block button:active {
+  background: #eeeded;
+  box-shadow: inset 5px 5px 12px #c7c7c7, inset -5px -5px 12px #f9f9f9;
+}
+.up {
+  margin: 0;
+  width: 70px;
+  border-radius: 50%;
 }
 .down {
-margin: 0;
-    width: 70px;
-    border-radius: 50%;
-
+  margin: 0;
+  width: 70px;
+  border-radius: 50%;
 }
 .start {
-    margin: 0;
-    padding: 0 10px;
-    width: 160px;
-    height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  width: 160px;
+  height: 40px;
 }
 .timer-count {
-    font-family: "Inter medium",sans-serif;
-    font-size: 70px;
-    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-    font-weight: 400;
-    border-radius: 20px;
+  font-family: "Inter medium", sans-serif;
+  font-size: 70px;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  border-radius: 20px;
 }
 .timer-seconds {
-    font-size: 32px;
-    margin-left: 14px;
+  font-size: 32px;
+  margin-left: 14px;
 }

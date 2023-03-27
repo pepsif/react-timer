@@ -9,7 +9,7 @@ import {
 } from "../../redux/slices/stopwatchSlice";
 
 function StopWatchTable() {
-  const disptach = useDispatch();
+  const dispatch = useDispatch();
   const stopwatchStarter = useSelector(
     (state) => state.stopwatch.stopwatchStarter
   );
@@ -21,11 +21,11 @@ function StopWatchTable() {
     const interval = setInterval(() => {
       if (stopwatchStarter === false) clearInterval(interval);
       if (stopwatchStarter === true) {
-        disptach(updateStopwatchSeconds());
+        dispatch(updateStopwatchSeconds());
       }
       if(seconds === 59 ) {
-       disptach(updateStopwatchMinutes());
-       disptach(setStopwatchSeconds(0))
+       dispatch(updateStopwatchMinutes());
+       dispatch(setStopwatchSeconds(0))
       }
 
     //   console.log("stopwatch table");
