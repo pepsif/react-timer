@@ -14,7 +14,8 @@
     border: none;
     text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
     background: #E0E0E0;
-    box-shadow: 23px 23px 46px #BEBEBE, -23px -23px 46px #FFFFFF;
+    box-shadow: 5px 5px 10px #bcbcbc,
+    -5px -5px 10px #ffffff;;
     border-radius: 51px;
 
 }

@@ -34,7 +34,7 @@ body {
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr;
     row-gap: 20px;
     
 }
