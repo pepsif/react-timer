@@ -22,10 +22,10 @@ const body = document.querySelector("body");
       body.style.color = "#908879fa";
        for(let i=1; i<=3;i++) {
         mainBlocks.children[i].style.boxShadow = "2px 2px 2px red";
-        
+      
        }
        for(let i=0; i<buttons.length;i++) {
-        buttons[i].style.boxShadow = "23px 23px 46px #BEBEBE, -1px -1px 0px red";
+        buttons[i].style.boxShadow = "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
         buttons[i].style.backgroundColor = "#8e8678";
        }
        
