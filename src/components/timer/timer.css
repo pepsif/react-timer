@@ -46,7 +46,7 @@
 }
 .up {
   margin: 0;
-  width: 70px;
+  /* width: 70px; */
   border-radius: 50%;
 }
 .down {
@@ -56,9 +56,9 @@
 }
 .start {
   margin: 0;
-  padding: 0 10px;
+  padding: 8px 10px;
   width: 160px;
-  height: 40px;
+ 
 }
 .timer-count {
   font-family: "Inter medium", sans-serif;

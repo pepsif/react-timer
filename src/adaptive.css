@@ -7,6 +7,7 @@
   }
   .number-block {
     font-size: 3rem;
+    /* letter-spacing: 1.4rem; */
   }
 
   /* --stopwatch-- */
@@ -47,6 +48,9 @@
 
 /* --760PX-- */
 @media (max-width: 760px) {
+  .number-block {
+    letter-spacing: 1rem;
+  }
   .date {
     font-size: 20px;
     text-align: center;
@@ -98,4 +102,16 @@
 
 
 
+}
+
+   /*--HEIGHT--*/
+@media (max-height: 418px) {
+  .clock-box {
+    grid-template-rows: 50px 1fr 1fr 1fr;
+  }
+}
+@media (max-height: 380px) {
+  .clock-box {
+    row-gap: 8px;
+  }
 }

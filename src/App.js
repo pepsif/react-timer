@@ -7,14 +7,15 @@ import { DarkThemeButton as ThemeButton } from "./components/DarkThemeButton/Dar
 import { useSelector } from "react-redux";
 
 function App() {
-  
+ const darkThemeOnnOff = useSelector((state) => state.darkTheme.darkThemeOnOff);
 
+ console.log(darkThemeOnnOff)
   useEffect(() => {
 const body = document.querySelector("body");
  const mainBlocks = document.querySelector(".clock-box");
  const buttons = document.querySelectorAll("button")
 
- console.log(buttons)
+//  console.log(buttons)
  
         //  --ON--
     if (ligtOnOffValue === true) {

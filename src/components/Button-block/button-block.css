@@ -1,33 +1,32 @@
 .button-block {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .button {
-    font-family: "Inter medium", sans-serif;
-    /*margin-right: 20px;*/
-    padding: 10px 30px;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-    background: #E0E0E0;
-    box-shadow: 5px 5px 10px #bcbcbc,
-    -5px -5px 10px #ffffff;;
-    border-radius: 51px;
-
+  font-family: "Inter medium", sans-serif;
+  /*margin-right: 20px;*/
+  padding: 10px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  /* background: #E0E0E0; */
+  box-shadow: 5px 5px 10px #bcbcbc, -5px -5px 10px #ffffff;
+  border-radius: 51px;
 }
-
 .button:hover {
-    opacity: 0.8;
+  /* opacity: 0.8; */
+  background-color: rgb(143, 81, 0) !important;
 }
-
+.button :checked {
+  background-color: red;
+}
 .active {
-    background-color: rgba(82, 165, 65, 0.6)
+  /* background-color: rgba(82, 165, 65, 0.6) */
 }
 
 .stop {
-    background-color: rgba(165, 65, 65, 0.6)
+  /* background-color: rgba(165, 65, 65, 0.6) */
 }
