@@ -19,7 +19,7 @@ function Clock() {
     setHours(hours);
     setMinutes(minutes);
 
-    document.title = `${hours}:${minutes}`;
+    document.title = `${hours}:${ minutes < 10 ? "0" + minutes : minutes}`;
   }, 1000);
 
   return (
@@ -29,8 +29,8 @@ function Clock() {
 
         <div className="number-block">
        
-          {hours < 10 ? "0" + hours : hours}:
-          {minutes < 10 ? "0" + minutes : minutes}
+          { hours < 10 ? "0" + hours : hours }:
+          { minutes < 10 ? "0" + minutes : minutes }
        
           
         </div>

@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "./DarkThemeButton.css";
 import { useSelector, useDispatch } from "react-redux";
+
 import { setThemeOnOff } from "../../redux/slices/darkThemeSlice.js";
 
 export const DarkThemeButton = () => {
@@ -8,9 +9,69 @@ export const DarkThemeButton = () => {
   const dispatch = useDispatch();
 
   
-  const darkthemeSelect = () => {
+  const darkThemeSelect = () => {
     dispatch(setThemeOnOff(!ligtOnOffValue));
   };
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    const mainBlocks = document.querySelector(".clock-box");
+    const buttons = document.querySelectorAll("button");
+
+    //  --ON--
+    if (ligtOnOffValue === true) {
+      body.style.backgroundColor = "rgb(29 29 30 / 92%)";
+      body.style.color = "#908879fa";
+      for (let i = 1; i <= 3; i++) {
+        mainBlocks.children[i].style.boxShadow = "2px 2px 2px red";
+      }
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.boxShadow =
+          "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
+        buttons[i].style.backgroundColor = "#8e8678";
+
+        buttons[i].onmouseover = (event) => {
+          let target = event.target;
+          target.style.boxShadow = "0px 0px 2px red,-0px -0px 2px red";
+          target.style.fontSize = "1.15rem";
+          
+        }
+
+        buttons[i].onmouseout = (event) => {
+          let target = event.target;
+          target.style.boxShadow = "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
+          target.style.fontSize = "1.2rem";
+        }
+      }
+
+      // -OFF-
+    } else {
+      body.style.backgroundColor = "rgba(196, 196, 196, 0.2)";
+      body.style.color = "black";
+      for (let i = 1; i <= 3; i++) {
+        mainBlocks.children[i].style.boxShadow ="8px 8px 16px #bebebe,-8px -8px 16px #ffffff";
+      }
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.boxShadow =
+          "4px 4px 10px #bebebe,-4px -4px 10px #ffffff";
+
+        buttons[i].style.backgroundColor = "#f3f3f3";
+
+        buttons[i].onmouseover = (event) => {
+          let target = event.target;
+          target.style.boxShadow = "0px 0px 2px #bebebe,-0px -0px 2px #ffffff";
+          target.style.fontSize = "1.15rem";
+          
+        }
+
+        buttons[i].onmouseout = (event) => {
+          let target = event.target;
+          target.style.boxShadow = "4px 4px 10px #bebebe,-4px -4px 10px #ffffff";
+          target.style.fontSize = "1.2rem";
+        }
+      }
+    }
+  });
 
   return (
     <>
@@ -31,7 +92,7 @@ export const DarkThemeButton = () => {
         <input
           type="checkbox"
           className="input"
-          onChange={() => darkthemeSelect()}
+          onChange={() => darkThemeSelect()}
         />
         <span className="slider"></span>
       </label>

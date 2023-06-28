@@ -30,11 +30,12 @@ body {
 .clock-box {
     width: 90%;
     height: 90%;
-    box-shadow: 20px 20px 60px #BEBEBE;
+    box-shadow: 17px 17px 34px #bebebe,
+    -17px -17px 34px #ffffff;;
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 40px;
     row-gap: 20px;
     
 }
