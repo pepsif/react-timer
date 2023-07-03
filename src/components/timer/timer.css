@@ -60,6 +60,9 @@
   width: 160px;
  
 }
+.start-active {
+  background-color: rgb(0, 165, 0) !important;
+}
 .timer-count {
   font-family: "Inter medium", sans-serif;
   font-size: 70px;

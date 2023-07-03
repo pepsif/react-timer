@@ -6,9 +6,10 @@ import { setThemeOnOff } from "../../redux/slices/darkThemeSlice.js";
 
 export const DarkThemeButton = () => {
   const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
+  const stopWatchStarter = useSelector(state => state.stopwatch.stopwatchStarter);
   const dispatch = useDispatch();
 
-  
+   
   const darkThemeSelect = () => {
     dispatch(setThemeOnOff(!ligtOnOffValue));
   };
@@ -30,18 +31,18 @@ export const DarkThemeButton = () => {
           "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
         buttons[i].style.backgroundColor = "#8e8678";
 
-        buttons[i].onmouseover = (event) => {
-          let target = event.target;
-          target.style.boxShadow = "0px 0px 2px red,-0px -0px 2px red";
-          target.style.fontSize = "1.15rem";
+        // buttons[i].onmouseover = (event) => {
+        //   let target = event.target;
+        //   target.style.boxShadow = "0px 0px 2px red,-0px -0px 2px red";
+        //   target.style.fontSize = "1.15rem";
           
-        }
+        // }
 
-        buttons[i].onmouseout = (event) => {
-          let target = event.target;
-          target.style.boxShadow = "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
-          target.style.fontSize = "1.2rem";
-        }
+        // buttons[i].onmouseout = (event) => {
+        //   let target = event.target;
+        //   target.style.boxShadow = "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
+        //   target.style.fontSize = "1.2rem";
+        // }
       }
 
       // -OFF-
@@ -57,20 +58,23 @@ export const DarkThemeButton = () => {
 
         buttons[i].style.backgroundColor = "#f3f3f3";
 
-        buttons[i].onmouseover = (event) => {
-          let target = event.target;
-          target.style.boxShadow = "0px 0px 2px #bebebe,-0px -0px 2px #ffffff";
-          target.style.fontSize = "1.15rem";
+        // buttons[i].onmouseover = (event) => {
+        //   let target = event.target;
+        //   target.style.boxShadow = "0px 0px 2px #bebebe,-0px -0px 2px #ffffff";
+        //   target.style.fontSize = "1.15rem";
           
-        }
+        // }
 
-        buttons[i].onmouseout = (event) => {
-          let target = event.target;
-          target.style.boxShadow = "4px 4px 10px #bebebe,-4px -4px 10px #ffffff";
-          target.style.fontSize = "1.2rem";
-        }
+        // buttons[i].onmouseout = (event) => {
+        //   let target = event.target;
+        //   target.style.boxShadow = "4px 4px 10px #bebebe,-4px -4px 10px #ffffff";
+        //   target.style.fontSize = "1.2rem";
+        // }
       }
     }
+     
+    
+
   });
 
   return (

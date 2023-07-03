@@ -16,17 +16,9 @@
   /* box-shadow: 5px 5px 10px #bcbcbc, -5px -5px 10px #ffffff; */
   border-radius: 51px;
 }
-.button:hover {
-  /* opacity: 0.8; */
-  /* background-color: rgb(143, 81, 0) !important; */
+.start-stop {
+  
 }
-.button :checked {
-  /* background-color: red; */
-}
-.active {
-  /* background-color: rgba(82, 165, 65, 0.6) */
-}
-
-.stop {
-  /* background-color: rgba(165, 65, 65, 0.6) */
+.start-stop-active{
+  background-color: rgb(0, 165, 0) !important;
 }

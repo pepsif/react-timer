@@ -59,7 +59,7 @@ const Timer = () => {
           <h3 className="timer-title">timer</h3>
           <div className="timer-button-block">
             <button className="button up" onClick={ timerIncrease }> + </button>
-            <button className="button start" onClick={ timerStart }> start </button>
+            <button className={(timerStarter) ? "button start start-active" : "button start" } onClick={ timerStart }> start </button>
            <button className="button down" onClick={ timerDecrease} > - </button>
             
           </div>
