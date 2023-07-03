@@ -1,20 +1,24 @@
 .clock-block {
   grid-column-start: 1;
   grid-row: 2/4;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
   box-shadow: 23px 23px 46px #BEBEBE, -23px -23px 46px #FFFFFF;
   border-radius: 50px;
     margin-left: 10%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .clock-table {
+ grid-row: 2/3;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
+  align-self: center;
+  justify-self: center;
 }
 .date {
   width: 100%;

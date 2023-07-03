@@ -1,5 +1,6 @@
 import React from "react";
 import "./clock.css";
+import { Weather } from "./WeatherBlock/Weather";
 
 function Clock() {
   const [hours, setHours] = React.useState(0);
@@ -24,7 +25,13 @@ function Clock() {
 
   return (
     <section className="clock-block">
+      
+      <Weather/>
+
+
       <div className="clock-table">
+         
+
         <div className="date">{`${day}/${ month < 10 ? "0" + month : month }/${year}`}</div>
 
         <div className="number-block">

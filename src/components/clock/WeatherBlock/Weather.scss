@@ -1,0 +1,23 @@
+.weather-block {
+//   grid-row: 1/1;
+  justify-self: right;
+
+  display: flex;
+  
+
+  margin-top: 20px;
+  margin-right: 20px;
+
+  .weather-icon {
+   width: 60px;
+   height: 60px;
+  }
+  .temperature {
+    font-size: 32px;
+    font-family: 'Inter light';
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
