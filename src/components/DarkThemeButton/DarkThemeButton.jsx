@@ -3,15 +3,18 @@ import "./DarkThemeButton.css";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setThemeOnOff } from "../../redux/slices/darkThemeSlice.js";
+import buttonClick from '../../assets/sounds/flamenco-click.wav';
 
 export const DarkThemeButton = () => {
   const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
   const stopWatchStarter = useSelector(state => state.stopwatch.stopwatchStarter);
   const dispatch = useDispatch();
+  const ButtonClick = new Audio(buttonClick)
 
    
   const darkThemeSelect = () => {
     dispatch(setThemeOnOff(!ligtOnOffValue));
+    ButtonClick.play()
   };
 
   useEffect(() => {
@@ -21,6 +24,7 @@ export const DarkThemeButton = () => {
 
     //  --ON--
     if (ligtOnOffValue === true) {
+
       body.style.backgroundColor = "rgb(29 29 30 / 92%)";
       body.style.color = "#908879fa";
       for (let i = 1; i <= 3; i++) {

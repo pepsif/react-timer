@@ -1,6 +1,10 @@
 import React from "react";
 import "./timer.css";
 
+import  click  from '../../assets/sounds/flamenco-click.wav';
+import click2 from '../../assets/sounds/game-ready-button-fx_D_major.wav';
+import endTimerMelody from '../../assets/sounds/lo-fi-bell-melody-lonely.wav';
+
 import { useSelector, useDispatch } from "react-redux";
 import { setTimerStarter, setTimerMinute, setTimerSeconds, } from "../../redux/slices/timerSlice";
 
@@ -11,6 +15,11 @@ const Timer = () => {
   const timerMinute = useSelector((state) => state.timer.timerMinute);
   const timerSecond = useSelector((state) => state.timer.timerSecond);
   const dispatch = useDispatch();
+
+  const Click = new Audio(click);
+  const Click2 = new Audio(click2);
+  const EndTimerMelody = new Audio(endTimerMelody)
+ 
 
   
   useEffect(() => {
@@ -29,6 +38,7 @@ const Timer = () => {
         dispatch(setTimerStarter(false));
         // alert("timer stop");
         dispatch(setTimerSeconds(0));
+        EndTimerMelody.play()
       }
     }, 1000);
 
@@ -39,17 +49,19 @@ const Timer = () => {
 
   const timerIncrease = () => {
     dispatch(setTimerMinute(timerMinute + 1));
+    Click.play()
   };
 
   const timerDecrease = () => {
     if (timerMinute === 0) return;
     dispatch(setTimerMinute(timerMinute - 1));
+    Click.play()
   };
 
   const timerStart = () => {
     if (timerStarter) return;
     dispatch(setTimerStarter(true));
-   
+   Click2.play()
   };
 
   return (

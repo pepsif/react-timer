@@ -1,6 +1,60 @@
+@media (max-width: 2561px) {
+  .clock-block {
+    height: 100%;
+
+    .weather-block {
+      margin-top: 8%;
+      margin-right: 8%;
+
+      .weather-icon {
+        width: 70px;
+        height: 70px;
+      }
+      .temperature {
+        font-size: 36px;
+        margin-top: 12%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1981px) {
+  .clock-block {
+    height: 100%;
+
+    .weather-block {
+      margin-top: 8%;
+      margin-right: 8%;
+
+      .weather-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .temperature {
+        font-size: 32px;
+        margin-top: 12%;
+      }
+    }
+  }
+}
+
 @media (max-width: 1102px) {
   .clock-block {
     height: 100%;
+
+    .weather-block {
+      margin-top: 8%;
+      margin-right: 8%;
+
+      .weather-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .temperature {
+        font-size: 20px;
+        margin-top: 12%;
+      }
+    }
   }
   .date {
     font-size: 1.6rem;
@@ -48,6 +102,22 @@
 
 /* --760PX-- */
 @media (max-width: 760px) {
+  .clock-block {
+    .weather-block {
+      margin-top: 8%;
+      margin-right: 8%;
+
+      .weather-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .temperature {
+        font-size: 22px;
+        margin-top: 10%;
+      }
+    }
+  }
+
   .number-block {
     letter-spacing: 1rem;
   }
@@ -97,18 +167,45 @@
   }
   .clock-block {
     width: 80%;
+
+    .weather-block {
+      margin-right: 26px;
+
+      .weather-icon {
+        width: 36px;
+        height: 36px;
+      }
+      .temperature {
+        font-size: 20px;
+        margin-top: 10%;
+      }
+    }
   }
 }
 /* --346PX--WIDTH */
 @media (max-width: 346px) {
   .clock-block {
     height: 40%;
+
+    .weather-block {
+      .weather-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .temperature {
+        font-size: 14px;
+        margin-top: 10%;
+      }
+    }
   }
-  .number-block, .stopwatch-table, .timer-count {
+  .number-block,
+  .stopwatch-table,
+  .timer-count {
     font-size: 40px;
     padding: 10px 0;
   }
 }
+
 /*--HEIGHT--*/
 @media (max-height: 418px) {
   .clock-box {
