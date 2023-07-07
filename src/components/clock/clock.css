@@ -21,19 +21,25 @@
   justify-self: center;
 }
 .date {
-  width: 100%;
+  /* width: 10%; */
   font-size: 2rem;
   font-family: "Inter light",sans-serif;
-  text-align: justify;
-  letter-spacing: 9px;
+  text-align: center;
+  letter-spacing: 10px;
   text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+ 
+  
+}
+.date-digits {
+ /* display: block; */
+  
 }
 .number-block {
   font-size: 4rem;
   font-family: "Inter medium",sans-serif;
   text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
-  text-align: center;
+  /* text-align: justify; */
   
 letter-spacing: 1.4rem;
 

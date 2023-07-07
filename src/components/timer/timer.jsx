@@ -10,7 +10,7 @@ import { setTimerStarter, setTimerMinute, setTimerSeconds, } from "../../redux/s
 
 import { useEffect } from "react";
 
-const Timer = () => {
+ const Timer = () => {
   const timerStarter = useSelector((state) => state.timer.timerStarter);
   const timerMinute = useSelector((state) => state.timer.timerMinute);
   const timerSecond = useSelector((state) => state.timer.timerSecond);
@@ -84,5 +84,6 @@ const Timer = () => {
     </section>
   );
 };
+
 
 export default Timer;

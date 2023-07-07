@@ -20,5 +20,8 @@
   
 }
 .start-stop-active{
-  background-color: rgb(0, 165, 0) !important;
+  /* background-color: rgb(0, 165, 0) !important; */
+
+  background: linear-gradient(270deg, #069b1f, #37d70b) !important;
+ 
 }

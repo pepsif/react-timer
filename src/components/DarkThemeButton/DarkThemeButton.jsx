@@ -27,6 +27,8 @@ export const DarkThemeButton = () => {
 
       body.style.backgroundColor = "rgb(29 29 30 / 92%)";
       body.style.color = "#908879fa";
+      
+      mainBlocks.style.boxShadow = 'rgb(230, 5, 5) 1px 1px 14px, rgb(230, 5, 5) -1px -1px 14px';
       for (let i = 1; i <= 3; i++) {
         mainBlocks.children[i].style.boxShadow = "2px 2px 2px red";
       }
@@ -53,6 +55,7 @@ export const DarkThemeButton = () => {
     } else {
       body.style.backgroundColor = "rgba(196, 196, 196, 0.2)";
       body.style.color = "black";
+      mainBlocks.style.boxShadow = '17px 17px 34px #bebebe, -17px -17px 34px #ffffff';
       for (let i = 1; i <= 3; i++) {
         mainBlocks.children[i].style.boxShadow ="8px 8px 16px #bebebe,-8px -8px 16px #ffffff";
       }

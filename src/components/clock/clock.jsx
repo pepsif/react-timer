@@ -20,26 +20,21 @@ function Clock() {
     setHours(hours);
     setMinutes(minutes);
 
-    document.title = `${hours}:${ minutes < 10 ? "0" + minutes : minutes}`;
+    document.title = `${hours}:${minutes < 10 ? "0" + minutes : minutes}`;
   }, 1000);
 
   return (
     <section className="clock-block">
-      
-      <Weather/>
-
+      <Weather />
 
       <div className="clock-table">
-         
-
-        <div className="date">{`${day}/${ month < 10 ? "0" + month : month }/${year}`}</div>
+        <div className="date">
+          <span className="date-digits">{`${ day < 10 ? "0"+day : day }/${month < 10 ? "0" + month : month}/${year}`}</span>
+        </div>
 
         <div className="number-block">
-       
-          { hours < 10 ? "0" + hours : hours }:
-          { minutes < 10 ? "0" + minutes : minutes }
-       
-          
+          {hours < 10 ? "0" + hours : hours}:
+          {minutes < 10 ? "0" + minutes : minutes}
         </div>
       </div>
     </section>
