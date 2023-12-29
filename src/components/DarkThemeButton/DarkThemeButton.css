@@ -9,6 +9,8 @@
     align-self: center;
     justify-self: right;
     margin-right: 60px;
+    box-shadow: 1px 1px 2px none !important;
+    border-radius: 20px;
   }
   
   .switch input {

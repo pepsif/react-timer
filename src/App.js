@@ -8,9 +8,9 @@ import { DarkThemeButton as ThemeButton } from "./components/DarkThemeButton/Dar
 
 function App() {
  
-
   return (
     <div className="clock-box">
+      
       <ThemeButton />
       <Clock />
       <StopWatchContainer />
