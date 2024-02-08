@@ -15,10 +15,10 @@ function ButtonBlock() {
     let Click2 = new Audio(click2);
     let Clear = new Audio(clear);
 
-    const stopwatchStarter = useSelector(( state ) => state.stopwatch.stopwatchStarter);
-    const stopwatchSeconds = useSelector((state) => state.stopwatch.second);
+    // const stopwatchStarter = useSelector(( state ) => state.stopwatch.stopwatchStarter);
+    // const stopwatchSeconds = useSelector((state) => state.stopwatch.second);
 
-    const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
+    // const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
   const stopWatchStarter = useSelector(state => state.stopwatch.stopwatchStarter);
 
        const stopwatchStart = (el) => {
@@ -31,8 +31,6 @@ function ButtonBlock() {
         Clear.play()
       }
 
-
-      
     return (
 
         <div className="button-block">
@@ -43,5 +41,4 @@ function ButtonBlock() {
 
     )
 }
-
 export default ButtonBlock

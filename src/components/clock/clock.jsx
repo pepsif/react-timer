@@ -1,7 +1,6 @@
 import React from "react";
 import "./clock.css";
 import { Weather } from "./WeatherBlock/Weather";
-
 function Clock() {
   const [hours, setHours] = React.useState(0);
   const [minutes, setMinutes] = React.useState(0);
@@ -12,6 +11,7 @@ function Clock() {
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
 
+  console.log(daysArr[now.getDay()])
   setInterval(() => {
     const now = new Date();
     const hours = now.getHours();
@@ -25,7 +25,7 @@ function Clock() {
 
   return (
     <section className="clock-block">
-      <Weather />
+      <Weather day={daysArr[now.getDay()]} />
 
       <div className="clock-table">
         <div className="date">

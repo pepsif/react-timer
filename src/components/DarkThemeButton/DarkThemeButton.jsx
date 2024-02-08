@@ -7,9 +7,7 @@ import buttonClick from "../../assets/sounds/flamenco-click.wav";
 
 export const DarkThemeButton = () => {
   const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
-  const stopWatchStarter = useSelector(
-    (state) => state.stopwatch.stopwatchStarter
-  );
+  // const stopWatchStarter = useSelector( (state) => state.stopwatch.stopwatchStarter );
   const dispatch = useDispatch();
   const ButtonClick = new Audio(buttonClick);
 
@@ -58,7 +56,7 @@ export const DarkThemeButton = () => {
         buttons[i].style.backgroundColor = "#f3f3f3";
       }
     }
-  });
+  },[ligtOnOffValue]);
 
   return (
     <>
