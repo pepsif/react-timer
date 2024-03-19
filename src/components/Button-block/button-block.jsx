@@ -4,7 +4,7 @@ import './button-block.css';
 import { useSelector, useDispatch } from "react-redux";
 import { setStopwatchStarter,  setStopwatchReset } from '../../redux/slices/stopwatchSlice';
 
-import  click  from '../../assets/sounds/flamenco-click.wav';
+// import  click  from '../../assets/sounds/flamenco-click.wav';
 import click2 from '../../assets/sounds/game-ready-button-fx_D_major.wav';
 import clear from '../../assets/sounds/short-beep_C_major.wav'
 
