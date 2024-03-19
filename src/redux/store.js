@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import stopwatchSlice from './slices/stopwatchSlice';
-import timerSlice from './slices/timerSlice';
+import timerSlice from './slices/timerSlice.js';
 import darkThemeSlice from './slices/darkThemeSlice';
 
 export const store = configureStore({

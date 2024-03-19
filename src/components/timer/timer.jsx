@@ -1,13 +1,9 @@
-import React from "react";
 import "./timer.css";
-
 import  click  from '../../assets/sounds/flamenco-click.wav';
 import click2 from '../../assets/sounds/game-ready-button-fx_D_major.wav';
 import endTimerMelody from '../../assets/sounds/lo-fi-bell-melody-lonely.wav';
-
 import { useSelector, useDispatch } from "react-redux";
 import { setTimerStarter, setTimerMinute, setTimerSeconds, } from "../../redux/slices/timerSlice";
-
 import { useEffect } from "react";
 
  const Timer = () => {
@@ -19,9 +15,8 @@ import { useEffect } from "react";
   const Click = new Audio(click);
   const Click2 = new Audio(click2);
   const EndTimerMelody = new Audio(endTimerMelody)
- 
 
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (timerStarter === false) clearInterval(interval);
