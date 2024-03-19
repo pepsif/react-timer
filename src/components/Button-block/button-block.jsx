@@ -2,7 +2,7 @@ import React from "react";
 import './button-block.css';
 
 import { useSelector, useDispatch } from "react-redux";
-import { setStopwatchStarter, setStopwatchPause, setStopwatchReset } from '../../redux/slices/stopwatchSlice';
+import { setStopwatchStarter,  setStopwatchReset } from '../../redux/slices/stopwatchSlice';
 
 import  click  from '../../assets/sounds/flamenco-click.wav';
 import click2 from '../../assets/sounds/game-ready-button-fx_D_major.wav';
@@ -11,7 +11,7 @@ import clear from '../../assets/sounds/short-beep_C_major.wav'
 function ButtonBlock() {
     const dispatch = useDispatch();
 
-    let Click = new Audio(click);
+    // let Click = new Audio(click);
     let Click2 = new Audio(click2);
     let Clear = new Audio(clear);
 

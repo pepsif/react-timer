@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   updateStopwatchMinutes,
   updateStopwatchSeconds,
-  setStopwatchMinutes,setStopwatchSeconds
+  setStopwatchSeconds
 
 } from "../../redux/slices/stopwatchSlice";
 
