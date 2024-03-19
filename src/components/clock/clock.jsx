@@ -5,13 +5,12 @@ function Clock() {
   const [hours, setHours] = React.useState(0);
   const [minutes, setMinutes] = React.useState(0);
 
-  const daysArr = ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+  const daysArr = ["Неділя", "Понеілок", "Вівторок", "Середа", "Четверг", "Пятниця", "Субота"];
   const now = new Date();
   const day = now.getDate();
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
 
-  console.log(daysArr[now.getDay()])
   setInterval(() => {
     const now = new Date();
     const hours = now.getHours();

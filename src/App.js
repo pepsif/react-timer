@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Clock from "./components/clock/clock";
 import StopWatchContainer from "./components/stop-watch/StopWatchContainer";

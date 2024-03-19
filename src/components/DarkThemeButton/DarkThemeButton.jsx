@@ -6,13 +6,13 @@ import { setThemeOnOff } from "../../redux/slices/darkThemeSlice.js";
 import buttonClick from "../../assets/sounds/flamenco-click.wav";
 
 export const DarkThemeButton = () => {
-  const ligtOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
+  const lightOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
   // const stopWatchStarter = useSelector( (state) => state.stopwatch.stopwatchStarter );
   const dispatch = useDispatch();
   const ButtonClick = new Audio(buttonClick);
 
   const darkThemeSelect = () => {
-    dispatch(setThemeOnOff(!ligtOnOffValue));
+    dispatch(setThemeOnOff(!lightOnOffValue));
     ButtonClick.play();
   };
 
@@ -22,7 +22,7 @@ export const DarkThemeButton = () => {
     const buttons = document.querySelectorAll("button");
 
     //  --ON--
-    if (ligtOnOffValue === true) {
+    if (lightOnOffValue === true) {
       body.style.backgroundColor = "rgb(29 29 30 / 92%)";
       body.style.color = "#908879fa";
 
@@ -56,7 +56,7 @@ export const DarkThemeButton = () => {
         buttons[i].style.backgroundColor = "#f3f3f3";
       }
     }
-  },[ligtOnOffValue]);
+  },[lightOnOffValue]);
 
   return (
     <>
