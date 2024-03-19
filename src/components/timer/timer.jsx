@@ -40,7 +40,7 @@ import { useEffect } from "react";
     return () => {
       clearInterval(interval);
     };
-  }, [timerStarter, timerSecond]);
+  }, [timerStarter, timerSecond, endTimerMelody,dispatch,timerMinute]);
 
   const timerIncrease = () => {
     dispatch(setTimerMinute(timerMinute + 1));
