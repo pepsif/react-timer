@@ -21,9 +21,9 @@ import { useEffect } from "react";
     const interval = setInterval(() => {
       if (timerStarter === false) clearInterval(interval);
       
-      {
+      
         timerStarter && dispatch(setTimerSeconds(timerSecond - 1));
-      }
+      
       if (timerStarter && timerMinute > 0 && timerSecond === 0) {
         dispatch(setTimerMinute(timerMinute - 1));
         dispatch(setTimerSeconds(59));
@@ -40,7 +40,7 @@ import { useEffect } from "react";
     return () => {
       clearInterval(interval);
     };
-  }, [timerStarter, timerSecond, endTimerMelody,dispatch,timerMinute]);
+  }, [timerStarter, timerSecond, EndTimerMelody,dispatch,timerMinute]);
 
   const timerIncrease = () => {
     dispatch(setTimerMinute(timerMinute + 1));
