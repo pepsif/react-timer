@@ -1,4 +1,5 @@
 import "./timer.css";
+import {motion} from "framer-motion";
 import click from '../../assets/sounds/flamenco-click.wav';
 import click2 from '../../assets/sounds/game-ready-button-fx_D_major.wav';
 import endTimerMelody from '../../assets/sounds/lo-fi-bell-melody-lonely.wav';
@@ -56,7 +57,11 @@ const Timer = () => {
   };
 
   return (
-    <section className="timer-section">
+    <motion.section className="timer-section"
+             initial={{scale:0}}
+             animate={{scale:1}}
+             transition={{delay:0.6}}
+    >
       <div className="timer-block">
         <h3 className="timer-title">timer</h3>
         <div className="timer-button-block">
@@ -68,7 +73,7 @@ const Timer = () => {
           {timerMinute < 10 ? "0" + timerMinute : timerMinute} : {timerSecond < 10 ? "0" + timerSecond : timerSecond}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

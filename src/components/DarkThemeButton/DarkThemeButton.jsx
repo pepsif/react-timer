@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setThemeOnOff } from "../../redux/slices/darkThemeSlice.js";
 import buttonClick from "../../assets/sounds/flamenco-click.wav";
 
+
 export const DarkThemeButton = () => {
   const lightOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
   // const stopWatchStarter = useSelector( (state) => state.stopwatch.stopwatchStarter );
@@ -79,7 +80,9 @@ export const DarkThemeButton = () => {
           className="input"
           onChange={() => darkThemeSelect()}
         />
-        <span className="slider"></span>
+        <span className="slider"
+
+        ></span>
       </label>
     </>
   );

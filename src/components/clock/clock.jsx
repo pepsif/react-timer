@@ -1,6 +1,10 @@
 import React from "react";
 import "./clock.css";
 import { Weather } from "./WeatherBlock/Weather";
+
+import {motion} from "framer-motion";
+
+
 function Clock() {
   const [hours, setHours] = React.useState(0);
   const [minutes, setMinutes] = React.useState(0);
@@ -23,7 +27,10 @@ function Clock() {
   }, 1000);
 
   return (
-    <section className="clock-block">
+    <motion.section className="clock-block"
+    initial={{scale:0}}
+    animate={{scale:1}}
+    >
       <Weather day={daysArr[now.getDay()]} />
 
       <div className="clock-table">
@@ -36,7 +43,7 @@ function Clock() {
           {minutes < 10 ? "0" + minutes : minutes}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
