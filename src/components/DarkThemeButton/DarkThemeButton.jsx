@@ -1,4 +1,3 @@
-import {React, useEffect} from "react";
 import "./DarkThemeButton.css";
 import {useSelector, useDispatch} from "react-redux";
 
@@ -7,8 +6,7 @@ import buttonClick from "../../assets/sounds/flamenco-click.wav";
 
 import {motion} from "framer-motion";
 
-
-export const DarkThemeButton = () => {
+export const DarkThemeButton = ({ darkStyle, lightStyle }) => {
     const lightOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
     // const stopWatchStarter = useSelector( (state) => state.stopwatch.stopwatchStarter );
     const dispatch = useDispatch();
@@ -19,54 +17,10 @@ export const DarkThemeButton = () => {
         ButtonClick.play();
     };
 
-    useEffect(() => {
-        const body = document.querySelector("body");
-        const mainBlocks = document.querySelector(".clock-box");
-        const buttons = document.querySelectorAll("button");
-
-        //  --ON--
-        if (lightOnOffValue === true) {
-            body.style.backgroundColor = "rgb(29 29 30 / 92%)";
-            body.style.color = "#908879fa";
-
-            mainBlocks.style.boxShadow =
-                "rgb(230, 5, 5) 1px 1px 14px, rgb(230, 5, 5) -1px -1px 14px";
-            for (let i = 1; i <= 3; i++) {
-                mainBlocks.children[i].style.boxShadow = "2px 2px 2px red";
-                // console.log(mainBlocks.children)
-            }
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.boxShadow =
-                    "rgb(46 46 47) 23px 23px 46px, -1px -1px 0px red";
-                buttons[i].style.backgroundColor = "#8e8678";
-            }
-
-            // -OFF-
-        } else {
-            body.style.backgroundColor = "rgba(196, 196, 196, 0.2)";
-
-            body.style.color = "black";
-            mainBlocks.style.boxShadow =
-                "17px 17px 34px #bebebe, -17px -17px 34px #ffffff";
-            for (let i = 1; i <= 3; i++) {
-                // console.log(mainBlocks.children[1]);
-                mainBlocks.children[i].style.boxShadow = "8px 8px 16px #bebebe,-8px -8px 16px #ffffff";
-            }
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.boxShadow =
-                    "4px 4px 10px #bebebe,-4px -4px 10px #ffffff";
-
-                buttons[i].style.backgroundColor = "#f3f3f3";
-            }
-        }
-    }, [lightOnOffValue]);
-
     return (
 
-        <motion.label className="switch"
-                      initial={{opacity: 0}}
-                      animate={{opacity: 1}}
-                      transition={{duration: 10}}>
+        <label className="switch" style={ lightOnOffValue ? darkStyle.switch : lightStyle.switch } >
+
         <span className="sun">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="#ffd43b">
@@ -90,7 +44,7 @@ export const DarkThemeButton = () => {
             <span className="slider"
 
             ></span>
-        </motion.label>
+        </label>
 
     );
 };
