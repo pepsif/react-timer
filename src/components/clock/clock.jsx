@@ -3,9 +3,12 @@ import "./clock.css";
 import {Weather} from "./WeatherBlock/Weather";
 
 import {motion} from "framer-motion";
+import {useSelector} from "react-redux";
 
 
-function Clock() {
+function Clock({ lightStyle, darkStyle }) {
+    const lightOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
+
     const [hours, setHours] = React.useState(0);
     const [minutes, setMinutes] = React.useState(0);
 
@@ -14,6 +17,7 @@ function Clock() {
     const day = now.getDate();
     const month = now.getMonth() + 1;
     const year = now.getFullYear();
+
 
     setInterval(() => {
         const now = new Date();
@@ -28,6 +32,7 @@ function Clock() {
 
     return (
         <motion.section className="clock-block"
+                        style={ lightOnOffValue ? darkStyle.clockBlock : lightStyle.clockBlock }
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
                         transition={{duration: 10}}

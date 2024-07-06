@@ -7,17 +7,21 @@ import { useSelector, useDispatch } from "react-redux";
 import { setTimerStarter, setTimerMinute, setTimerSeconds } from "../../redux/slices/timerSlice";
 import { useEffect, useMemo } from "react";
 
-const Timer = () => {
+const Timer = ({ lightStyle, darkStyle }) => {
   const timerStarter = useSelector((state) => state.timer.timerStarter);
   const timerMinute = useSelector((state) => state.timer.timerMinute);
   const timerSecond = useSelector((state) => state.timer.timerSecond);
   const dispatch = useDispatch();
+  const lightOnOffValue = useSelector((state) => state.darkTheme.darkThemeOnOff);
 
   const Click = useMemo(() => new Audio(click), []);
   const Click2 = useMemo(() => new Audio(click2), []);
   const EndTimerMelody = useMemo(() => new Audio(endTimerMelody), []);
 
+
+
   useEffect(() => {
+
     const interval = setInterval(() => {
       if (!timerStarter) clearInterval(interval);
 
@@ -58,6 +62,7 @@ const Timer = () => {
 
   return (
     <motion.section className="timer-section"
+                    style={ lightOnOffValue ? darkStyle.timerSection : lightStyle.timerSection }
              initial={{opacity:0}}
              animate={{opacity:1}}
              transition={{delay:2, duration: 10}}
@@ -65,9 +70,18 @@ const Timer = () => {
       <div className="timer-block">
         <h3 className="timer-title">timer</h3>
         <div className="timer-button-block">
-          <button className="button up" onClick={timerIncrease}>+</button>
-          <button className={`button start ${timerStarter ? 'start-active' : ''}`} onClick={timerStart}>start</button>
-          <button className="button down" onClick={timerDecrease}>-</button>
+          <button className="button up" onClick={timerIncrease}
+                  style={ lightOnOffValue ? darkStyle.buttons : lightStyle.buttons }>
+            +
+          </button>
+          <button className={`button start ${timerStarter ? 'start-active' : ''}`} onClick={timerStart}
+                  style={ lightOnOffValue ? darkStyle.buttons : lightStyle.buttons }>
+            start
+          </button>
+          <button className="button down" onClick={timerDecrease}
+                  style={ lightOnOffValue ? darkStyle.buttons : lightStyle.buttons }>
+            -
+          </button>
         </div>
         <div className="timer-count">
           {timerMinute < 10 ? "0" + timerMinute : timerMinute} : {timerSecond < 10 ? "0" + timerSecond : timerSecond}
